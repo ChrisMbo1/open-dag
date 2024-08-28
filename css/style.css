@@ -1,0 +1,29 @@
+*{
+    margin: auto 0;
+    padding: auto 0;
+}
+.body{
+    height:fit-content;
+    
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(7, 35, 73);
+    padding: 15px;
+}
+
+nav{
+    display: flex;
+    gap:50px
+
+}
+
+a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
