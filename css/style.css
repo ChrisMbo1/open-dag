@@ -1,29 +1,267 @@
-*{
-    margin: auto 0;
-    padding: auto 0;
-}
-.body{
-    height:fit-content;
-    
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header-links {
     display: flex;
+    justify-content: space-around;
+    background-color: #03357c;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.background-img {
+    background: url('../img/Sanne\ Bas\ -\ Curio\ -\ Terheijdenseweg\ 350-2.jpg') center / cover no-repeat fixed;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background-color: rgb(7, 35, 73);
-    padding: 15px;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
 }
 
-nav{
-    display: flex;
-    gap:50px
-
+.overlay-box, .overlay-box-2, .overlay-box-3, .overlay-box-4, .overlay-box-5 {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px;
+    border-radius: 20px;
+    max-width: 50%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 200px;
+    margin-top: 200px;
 }
 
-a{
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
+.overlay-box-3, .overlay-box, .overlay-box-4, .overlay-box-5 {
+    max-width: 70%;
+}
+
+.overlay-box-4, .overlay-box-5 {
+    padding: 40px;
+}
+
+.overlay-box-5 {
+    max-width: 90%;
+    margin-bottom: 500px;
+}
+
+.section {
+    padding: 20px;
+    margin: 50px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    background-color: #ffcc00;
+    font-size: 4rem;
     font-weight: bolder;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+img {
+    height: 60px;
+    width: 160px;
+    margin-bottom: 18px;
+}
+
+p {
+    color: #333;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.rooster-img, .opleiding-img {
+    margin-left: 50px;
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.course-grid, .teachers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.course-box, .teachers-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-box {
+    width: calc(50% - 100px);
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.course-box h2, .teachers-box h2 {
+    background-color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.course-box p, .teachers-box p {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.teachers-box {
+    background-color: #ffcc00;
+    width: calc(20% - 40px);
+}
+
+.teacher-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 5%;
+}
+
+.footer-content {
+    font-size: 2.5rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.software-dev {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .course-box {
+        width: calc(50% - 40px);
+    }
+
+    .teachers-box {
+        width: calc(25% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .course-box, .teachers-box {
+        width: calc(100% - 40px);
+    }
+
+    .header-links a {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    .footer-logo {
+        width: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-box, .overlay-box-2, .overlay-box-3, .overlay-box-4, .overlay-box-5 {
+        max-width: 90%;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .rooster-img, .opleiding-img {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .teacher-img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-links {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .header-links a {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .footer-content {
+        font-size: 1.5rem;
+    }
+
+    .footer-logo {
+        width: 15%;
+    }
 }
