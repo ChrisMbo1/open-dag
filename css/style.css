@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    padding-top: 120px
 }
 
 .header-links {
@@ -13,8 +14,10 @@ body {
     justify-content: space-around;
     background-color: #03357c;
     padding: 30px;
-    position: relative;
-    z-index: 1;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    z-index: 1000;
 }
 
 .background-img {
@@ -92,7 +95,8 @@ p {
     color: #333;
     font-size: 2rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+ 
 }
 
 .rooster-img, .opleiding-img {
@@ -110,7 +114,17 @@ p {
     justify-content: center;
 }
 
-.course-box, .teachers-box {
+.course-box{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.teachers-box {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -120,9 +134,10 @@ p {
 }
 
 .course-box {
-    width: calc(50% - 100px);
-    min-width: 200px;
-    max-width: 500px;
+    padding: 20px;
+    width: calc(80% - 100px);
+    max-height: 900px;
+    max-width: 700px;
 }
 
 .course-box h2, .teachers-box h2 {
